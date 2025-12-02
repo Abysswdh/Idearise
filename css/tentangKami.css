@@ -1,0 +1,988 @@
+* {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5fbef;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  top: 0;
+  position: sticky;
+  z-index: 1000;
+  transition: ease-in-out 200ms;
+  background-color: none;
+}
+
+.logo-left img {
+  transition: left 0.2s ease, width 0.2s ease;
+}
+
+/* Loading */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  pointer-events: none;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #84c318;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#content {
+  display: none;
+}
+/* end of Loading */
+
+/* navigasi */
+.navigation {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: transparent;
+  position: relative;
+}
+
+.navigation.scrolled {
+  background-color: white;
+  transition: ease-in-out 200ms;
+}
+
+.logo-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-left a img {
+  width: 150px;
+}
+
+.nav-middle {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-middle a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 30px;
+  transition: ease-in-out 200ms;
+  color: #ffffff;
+}
+
+.nav-middle a:hover {
+  scale: 1.1;
+  transition: ease-in-out 200ms;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  background-color: #84c318;
+  transition: left 0.2s ease, width 0.2s ease;
+  border-radius: 15px;
+}
+
+.button-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.daftar-button {
+  color: #503d42;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  text-decoration: none;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  transition: ease-in-out 100ms;
+  scale: 1;
+}
+
+.daftar-button:hover {
+  scale: 1.2;
+  color: white;
+  background-color: #503d42;
+  transition: ease-in-out 100ms;
+}
+
+.dropdown {
+  display: none;
+  position: relative;
+}
+
+.dropbtn {
+  color: #503d42;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  text-decoration: none;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  transition: ease-in-out 100ms;
+  scale: 1;
+  border: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  border-radius: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #503d42;
+  color: white;
+  transition: ease-in-out 100ms;
+}
+
+@media screen and (max-width: 840px) {
+  .nav-middle,
+  .button-right {
+    display: none;
+  }
+
+  .dropdown {
+    display: block;
+  }
+}
+
+/* end of navigasi */
+
+/* Hero Video: Tentang Kami */
+#FullScreenVideo-tentangKami {
+  height: 100dvh;
+}
+
+.video-background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(0.5);
+  z-index: -1000;
+}
+
+.video-background {
+  height: 75dvh;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  color: white;
+  margin-left: 3%;
+}
+
+.video-background h1 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: 600;
+  font-family: "Sora", sans-serif;
+}
+
+.video-background p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.video-background img {
+  width: 200px;
+  height: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .video-background {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .video-background h1 {
+    text-align: center;
+    font-size: 20px;
+    width: 80%;
+  }
+
+  .video-background p {
+    text-align: justify;
+    font-size: 14px;
+    width: 80%;
+  }
+}
+@media (max-width: 480px) {
+  .video-background h1 {
+    font-size: 18px;
+  }
+
+  .video-background p {
+    font-size: 12px;
+  }
+}
+
+/* end of Hero Video: Tentang Kami */
+
+/* tentang kami */
+.line {
+  border-bottom: 4px solid #84c318;
+  border-radius: 10px;
+}
+
+.tentangkami-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
+  margin: 40px 100px 40px 100px;
+}
+
+.tentangkami-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.tentangkami-image img {
+  margin-top: 50px;
+  width: 120%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.tentangkami-text {
+  flex: 1;
+  max-width: 600px;
+  text-align: center;
+}
+
+.tentangkami-text h1 {
+  text-align: left;
+  color: #503d42;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: "Sora", sans-serif;
+}
+
+.tentangkami-text h3 {
+  text-align: justify;
+  color: #503d42;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.namadanlogo-container {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 100px 40px 100px;
+}
+
+.namadanlogo-title-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.namadanlogo-title-container h1 {
+  font-family: "Sora", sans-serif;
+  text-align: center;
+  color: #503d42;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.namadanlogo-content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+}
+
+.namadanlogo-text-left,
+.namadanlogo-text-right {
+  flex: 1;
+  max-width: 400px;
+  text-align: justify;
+}
+
+.namadanlogo-image-container {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+  margin: 30px;
+}
+
+.namadanlogo-image-container img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.namadanlogo-text-left h1,
+.namadanlogo-text-right h1 {
+  color: #503d42;
+  font-family: "Sora", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.namadanlogo-text-left p,
+.namadanlogo-text-right p {
+  color: #503d42;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.namadanlogo-text-right {
+  margin-top: 400px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .tentangkami-container {
+    margin: -50px 20px 50px 20px;
+    flex-direction: column-reverse;
+  }
+  .tentangkami-text {
+    max-width: 100%;
+  }
+  .tentangkami-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tentangkami-image img {
+    width: 100%;
+    margin-top: 0;
+  }
+  .namadanlogo-container {
+    margin: 0px 20px 50px 20px;
+  }
+  .namadanlogo-text-left p,
+  .namadanlogo-text-right p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tentangkami-text h1 {
+    font-size: 18px;
+  }
+  .tentangkami-text h3 {
+    font-size: 14px;
+  }
+  .namadanlogo-content-container {
+    flex-direction: column;
+  }
+  .namadanlogo-text-right {
+    margin: 0;
+  }
+  .namadanlogo-text-left,
+  .namadanlogo-text-right {
+    max-width: 100%;
+  }
+  .namadanlogo-title-container h1 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tentangkami-text h1 {
+    font-size: 16px;
+  }
+  .tentangkami-text h3 {
+    font-size: 12px;
+  }
+  .namadanlogo-text-left h1,
+  .namadanlogo-text-right h1 {
+    font-size: 14px;
+  }
+}
+/* end of tentang kami */
+
+/* fiturdanmenu tentang kami */
+.fiturdanmenu-container {
+  height: 100dvh;
+  background-color: #84c318;
+}
+
+.fiturdanmenu-title-container {
+  height: 10dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fiturdanmenu-title-container h1 {
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: "Sora", sans-serif;
+}
+
+.fiturdanmenu-content-container {
+  width: 500%;
+  height: 70dvh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.panel {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.fiturdanmenu-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slides-container {
+  width: 35%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%;
+}
+
+.slides img {
+  width: 33.333%;
+  height: auto;
+  object-fit: cover;
+}
+
+.fiturdanmenu-right {
+  width: 50%;
+}
+
+.fiturdanmenu-right h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: "Sora", sans-serif;
+  width: 100%;
+}
+
+.fiturdanmenu-right p {
+  width: 100%;
+  text-align: justify;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .fiturdanmenu-right p{
+    font-size: 12px;
+  }
+  .slides-container {
+    width: 60%;
+  }
+  .fiturdanmenu-right {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .fiturdanmenu-left{
+    display: none;
+  }
+  .fiturdanmenu-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .fiturdanmenu-right h2{
+    font-size: 16px;
+  }
+  .fiturdanmenu-right p{
+    font-size: 12px;
+  }
+}
+
+/* end of fiturdanmenu tentang kami */
+
+/* konsep kami */
+.konsepkami-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.konsepkami-title-container {
+  color: #503d42;
+}
+
+.konsepkami-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.imagekiri,
+.imagekanan {
+  margin: 150px auto 150px auto;
+  margin-top: 150px;
+  width: 400px;
+  height: auto;
+}
+
+.imagemiddle {
+  width: 400px;
+  height: auto;
+}
+
+.imagekiri h1,
+.imagemiddle h1,
+.imagekanan h1 {
+  text-align: center;
+  color: #503d42;
+  font-family: "Sora", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.imagekiri img,
+.imagemiddle img,
+.imagekanan img {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  width: 400px;
+}
+
+.konsepkami-warna-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+}
+
+.konsepkami-warna-image-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.konsepkami-warna-image-container img {
+  width: 60%;
+}
+
+.konsepkami-warna-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.konsepkami-warna-text-container h1 {
+  color: #503d42;
+  font-family: "Sora", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.konsepkami-warna-text-container p {
+  color: #503d42;
+  font-family: "Sora", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1270px) {
+  .konsepkami-image-container {
+    flex-direction: column;
+  }
+  .imagekiri,
+  .imagekanan,
+  .imagemiddle {
+    margin: auto;
+  }
+  .konsepkami-warna-container {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .konsepkami-warna-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .konsepkami-warna-text-container h1,
+  .konsepkami-warna-text-container p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .konsepkami-title-container h1,
+  .konsepkami-warna-text-container h1 {
+    font-size: 18px;
+  }
+  .konsepkami-image-container h1,
+  .konsepkami-warna-text-container p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imagekanan,
+  .imagekiri,
+  .imagemiddle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .konsepkami-image-container img {
+    max-width: 50%;
+    height: auto;
+  }
+}
+
+/* end of konsep kami */
+
+/* footer */
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-bottom: 0;
+  -webkit-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.15);
+}
+
+.upper-footer {
+  display: flex;
+  flex-direction: row;
+  margin: 40px 100px 40px 100px;
+}
+
+.upper-footer .logo-and-description {
+  width: 25%;
+  height: 100%;
+}
+
+.line-footer-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0px;
+  border-bottom: 4px solid #84c318;
+  width: 100%;
+  margin: 0;
+  margin-top: -4%;
+}
+
+.upper-footer .logo-and-description {
+  display: flex;
+  flex-direction: column;
+  color: #503d42;
+  margin-right: 50px;
+}
+
+.upper-footer .logo-and-description img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.upper-footer .logo-and-description h3 {
+  width: 100%;
+  text-align: justify;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.upper-footer .location {
+  display: flex;
+  flex-direction: column;
+  color: #503d42;
+  margin-right: 30px;
+  width: 25%;
+}
+
+.upper-footer .location h2,
+.upper-footer .contact h2,
+.navigasi h2,
+.petisi-unggulan h2,
+.urun-dana-unggulan h2 {
+  font-family: "Sora", sans-serif;
+  font-size: 20px;
+}
+
+.upper-footer .location p,
+.upper-footer .contact p {
+  font-size: 14px;
+}
+
+.upper-footer .contact {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  font-family: "Sora", sans-serif;
+  color: #503d42;
+  width: 25%;
+}
+
+.upper-footer .contact div {
+  display: flex;
+  flex-direction: row;
+  margin: -10px 0px -20px;
+}
+
+.upper-footer .contact div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #503d42;
+  margin: 2%;
+  width: 50px;
+  height: 50px;
+  background-color: #f5fbef;
+  border-radius: 100px;
+}
+
+.upper-footer .contact div div:hover {
+  color: #ffffff;
+  background-color: #503d42;
+}
+
+.navigasi,
+.petisi-unggulan,
+.urun-dana-unggulan {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  color: #503d42;
+  margin-left: 20px;
+}
+
+.navigasi a,
+.petisi-unggulan a,
+.urun-dana-unggulan a {
+  text-decoration: none;
+  color: #503d42;
+  font-size: 14px;
+}
+
+.navigasi a:hover,
+.petisi-unggulan a:hover,
+.urun-dana-unggulan a:hover {
+  color: #84c318;
+}
+
+.down-footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.line-footer-2 {
+  align-self: center;
+  height: 0px;
+  border-bottom: 4px solid #84c318;
+  width: 80%;
+  margin: 0;
+}
+
+.down-footer h2 {
+  color: #503d42;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Sora", sans-serif;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1230px) {
+  .upper-footer {
+    margin: 20px 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .location,
+  .contact,
+  .navigasi,
+  .petisi-unggulan,
+  .urun-dana-unggulan {
+    text-align: center;
+  }
+  .upper-footer {
+    flex-direction: column;
+    margin: 40px 20px;
+  }
+
+  .upper-footer .logo-and-description,
+  .upper-footer .location,
+  .upper-footer .contact {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navigasi,
+  .petisi-unggulan,
+  .urun-dana-unggulan {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+  }
+  .line-footer-1 {
+    margin-top: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .upper-footer {
+    flex-direction: column;
+    margin: 40px 20px;
+  }
+  .upper-footer > div {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .upper-footer .logo-and-description img {
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upper-footer {
+    margin: 20px 10px;
+  }
+  .upper-footer .location h2,
+  .upper-footer .contact h2,
+  .navigasi h2,
+  .petisi-unggulan h2,
+  .urun-dana-unggulan h2 {
+    font-size: 18px;
+  }
+  .upper-footer .location p,
+  .upper-footer .contact p,
+  .navigasi a,
+  .petisi-unggulan a,
+  .urun-dana-unggulan a {
+    font-size: 12px;
+  }
+  .down-footer h2 {
+    font-size: 12px;
+  }
+}
+/* end of footer */

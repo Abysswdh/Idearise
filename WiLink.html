@@ -1,0 +1,874 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiLink: Your Smart Home, Seamlessly Connected</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Assets/images/favicon.png">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/wilink.css">
+
+    <!-- Javascript -->
+    <script src="js/script.js"></script>
+    <script src="js/wilink.js"></script>
+
+    <!-- Animation AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <!-- Icons FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/f90068558c.js" crossorigin="anonymous"></script>
+
+    <!-- Fonts GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Loading -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    <!-- end of Loading -->
+
+    <!-- navigasi -->
+    <header>
+        <nav class="navigation">
+            <div class="logo-left">
+                <a href="home.html">
+                    <img class="logo-nav" src="Assets/Idearise_logo/6.png" alt="Logo Idearise">
+                </a>
+            </div>
+            <div class="nav-middle" id="nav-middle">
+                <a href="home.html" class="nav-link">Beranda</a>
+                <a href="tentangKami.html" class="nav-link">Tentang Kami</a>
+                <a href="petisi.html" class="nav-link">Petisi</a>
+                <a href="urunDana.html" class="nav-link active" id="nav-link-active">Urun Dana</a>
+                <div class="underline" id="underline"></div>
+            </div>
+            <div class="button-right">
+                <a href="#" class="daftar-button">Daftar</a>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-bars"></i> Menu</button>
+                <div class="dropdown-content">
+                    <a href="home.html">Beranda</a>
+                    <a href="tentangKami.html">Tentang Kami</a>
+                    <a href="petisi.html">Petisi</a>
+                    <a href="urunDana.html">Urun Dana</a>
+                    <a href="#" class="daftar-link">Daftar</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- end of navigasi -->
+
+    <main>
+        <!-- MainUrunDana_WiLink -->
+        <section id="MainUrunDana_WiLink">
+            <div class="main-urun-dana-title-container" data-aos="zoom-in">
+                <h4>Urun Dana</h4>
+                <h1>Wilink: Your smart home, seamlessly connected.
+                    <br>Aplikasi management smart home terkemuka
+                </h1>
+            </div>
+            <div class="main-urun-dana-content-container">
+                <div class="main-urun-dana-content-left-container" data-aos="fade-right">
+                    <img src="Assets/wilink/wilink-hero.png" alt="Image not loading">
+                    <div class="category">
+                        <h3>Populer</h3>
+                        <h3>Unggulan</h3>
+                        <h4>Aplikasi</h4>
+                        <h4>Teknologi</h4>
+                    </div>
+                </div>
+                <div class="main-urun-dana-content-right-container" data-aos="fade-left">
+                    <div class="main-urun-dana-content-right-up-container">
+                        <div class="userinfo">
+                            <div class="profile-picture">
+                                <img src="Assets/images/Profile_Pictures/1.jpg" alt="Image not loading">
+                            </div>
+                            <div class="username-and-date">
+                                <h2>Team Arikappucino</h2>
+                                <p>7 Desember 2023</p>
+                            </div>
+                        </div>
+                        <div class="terverifikasi">
+                            <h3><i class="fas fa-check-circle" style="color: green;"></i></h3>
+                            <h2>Terverifikasi</h2>
+                        </div>
+                    </div>
+                    <div class="main-urun-dana-content-right-middle-container">
+                        <div class="target-urun-dana-statistics-title-container">
+                            <p>Target Urun Dana</p>
+                        </div>
+                        <div class="target-statistics">
+                            <div>
+                                <p>
+                                    Nilai Pendanaan:
+                                </p>
+                                <h2>
+                                    IDR 19.750.000
+                                </h2>
+                            </div>
+                            <div>
+                                <p>
+                                    Sumber Pendanaan:
+                                </p>
+                                <h2>
+                                    35 Kontribusi
+                                </h2>
+                            </div>
+                            <div>
+                                <p>
+                                    Waktu Pendanaan:
+                                </p>
+                                <h2>
+                                    30 Hari
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-urun-dana-content-right-down-container">
+                        <div class="title-and-statistics-container">
+                            <div class="target-terpenuhi-statistics-title-container">
+                                <p>Target Terpenuhi</p>
+                            </div>
+                            <div class="statistics">
+                                <div class="statistics-item">
+                                    <div class="circle">
+                                        <svg width="60" height="60" viewBox="0 0 100 100">
+                                            <circle class="bg" cx="50" cy="50" r="40" fill="none" stroke="#ddd"
+                                                stroke-width="15"></circle>
+                                            <circle class="fg" cx="50" cy="50" r="40" fill="none" stroke="#6cbf1f"
+                                                stroke-width="15" stroke-dasharray="260"></circle>
+                                            <text x="50" y="55" text-anchor="middle" font-size="20"
+                                                fill="#6cbf1f">100%</text>
+                                        </svg>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            IDR 19.750.000 <span style="font-size: 14px;
+                                            font-weight: 500;
+                                            color: #503d42;">
+                                                Didanai
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="statistics-item">
+                                    <div class="circle">
+                                        <svg width="60" height="60" viewBox="0 0 100 100">
+                                            <circle class="bg" cx="50" cy="50" r="40" fill="none" stroke="#ddd"
+                                                stroke-width="15"></circle>
+                                            <circle class="fg" cx="50" cy="50" r="40" fill="none" stroke="#6cbf1f"
+                                                stroke-width="15" stroke-dasharray="260"></circle>
+                                            <text x="50" y="55" text-anchor="middle" font-size="20"
+                                                fill="#6cbf1f">100%</text>
+                                        </svg>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            35 Orang <span style="font-size: 14px;
+                                            font-weight: 500;
+                                            color: #503d42;">
+                                                Berkontribusi
+                                            </span>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="statistics-item">
+                                    <div class="circle">
+                                        <svg width="60" height="60" viewBox="0 0 100 100">
+                                            <circle class="bg" cx="50" cy="50" r="40" fill="none" stroke="#ddd"
+                                                stroke-width="15"></circle>
+                                            <circle class="fg" cx="50" cy="50" r="40" fill="none" stroke="#6cbf1f"
+                                                stroke-width="15" stroke-dasharray="260"></circle>
+                                            <text x="50" y="55" text-anchor="middle" font-size="20"
+                                                fill="#6cbf1f">100%</text>
+                                        </svg>
+                                    </div>
+                                    <div class="text">
+                                        <h2>
+                                            30 Hari <span style="font-size: 14px;
+                                            font-weight: 500;
+                                            color: #503d42;">
+                                                Berlalu
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="urun-dana-engagement-and-button-container">
+                            <div class="urun-dana-engagement-container">
+                                <button id="like-button">
+                                    <i class="fas fa-heart"></i> <span id="like-count">300</span>
+                                </button>
+                                <button id="comment-button">
+                                    <i class="fas fa-comment"></i> 4
+                                </button>
+                                <button id="share-button">
+                                    <i class="fas fa-share"></i> 13
+                                </button>
+                            </div>
+                            <div class="urun-dana-button-container">
+                                <a href="#opsi-pendanaan-urun-dana" class="urun-dana-danai-button">
+                                    Pilih Opsi Pendanaan
+                                </a>
+                                <a class="urun-dana-share-button">
+                                    <i class="fas fa-share"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of MainUrunDana_WiLink -->
+
+        <!-- OVERALL CONTAINER -->
+        <div class="overall-container">
+
+            <!-- LEFT CONTAINER -->
+            <div class="overall-left-container">
+
+                <!-- deskripsi (LEFT) -->
+                <div class="container-page-deskripsi" data-aos="fade-right">
+                    <h2>Deskripsi</h2>
+                    <p>
+                        Di era digital saat ini, kemajuan teknologi informasi dan komunikasi telah mendorong
+                        perkembangan
+                        konsep "smart city" yang bertujuan untuk menciptakan kota-kota yang lebih efisien dan
+                        berkelanjutan.
+                        Salah satu komponen penting dari smart city adalah "smart home" atau rumah pintar, yang
+                        memungkinkan
+                        penghuni untuk mengelola dan mengontrol perangkat rumah mereka dengan teknologi canggih.
+                        Meskipun
+                        banyak aplikasi smart home tersedia, banyak dari mereka masih memiliki kekurangan, terutama
+                        dalam
+                        hal integrasi dengan sumber energi terbarukan. Hal ini membatasi potensi untuk mengoptimalkan
+                        efisiensi energi dan dampak lingkungan positif yang dapat diberikan oleh rumah pintar.
+
+                        <br><br>
+
+                        Wilink, singkatan dari "Wirelessly Linked," merupakan solusi inovatif yang dirancang untuk
+                        mengatasi
+                        kekurangan-kekurangan ini. Aplikasi ini menawarkan integrasi menyeluruh antara perangkat smart
+                        home
+                        dengan sistem manajemen energi, termasuk energi terbarukan seperti panel surya. Dengan WiLink,
+                        pengguna dapat mengelola konsumsi energi, mengontrol perangkat pintar, dan memantau penggunaan
+                        energi secara efisien dari satu platform yang terhubung secara nirkabel. Ini memungkinkan
+                        pengguna
+                        untuk mengoptimalkan pengalaman smart home mereka dengan cara yang lebih terintegrasi dan ramah
+                        lingkungan.
+
+                        <br><br>
+
+                        Wilink dilengkapi dengan berbagai fitur canggih untuk meningkatkan pengalaman pengguna dalam
+                        mengelola rumah pintar. Fitur utama meliputi pengaturan konsumsi energi dari sumber listrik dan
+                        energi terbarukan, kontrol perangkat pintar, serta integrasi dengan toko produk smart home.
+                        Aplikasi
+                        ini juga menyediakan fitur otomatisasi untuk mengatur jadwal perangkat, serta tips hemat energi
+                        yang
+                        berguna untuk pengguna. Desain antarmuka pengguna (UI/UX) Wilink dirancang agar intuitif dan
+                        mudah
+                        digunakan, memungkinkan pengguna untuk dengan cepat menemukan dan memanfaatkan berbagai fitur
+                        yang
+                        tersedia.
+                        <br>
+                    </p>
+
+                    <div style="width: 100%; height: 300px; position: relative; overflow: hidden;">
+                        <video style="width: 100%; height: 100%; object-fit: contain" autoplay muted loop>
+                            <source src="Assets/wilink/deskripsi_video_1.mp4" type="video/mp4">
+                            Error
+                        </video>
+                    </div>
+                    <p>
+                        <br>
+                        Penggunaan Wilink memberikan manfaat signifikan bagi pengguna, termasuk penghematan waktu dan
+                        tenaga
+                        dalam mengelola perangkat rumah pintar. Dengan kemampuan untuk mengontrol berbagai aspek rumah
+                        dari
+                        satu aplikasi, pengguna dapat lebih mudah mengatur pencahayaan, temperatur, dan sistem keamanan.
+                        Fitur otomatisasi dan saran hemat energi yang disediakan membantu mengurangi konsumsi energi dan
+                        biaya terkait, sambil berkontribusi pada tujuan lingkungan yang lebih besar. Wilink mendukung
+                        berbagai kelompok pengguna, termasuk generasi muda, lansia, orang dengan keterbatasan fisik, dan
+                        mereka yang peduli dengan efisiensi energi.
+
+                        <br><br>
+
+                        Wilink adalah solusi komprehensif untuk mengelola dan mengoptimalkan rumah pintar dalam konteks
+                        smart city. Dengan integrasi yang mulus antara kontrol perangkat pintar dan manajemen energi
+                        terbarukan, Wilink tidak hanya meningkatkan efisiensi energi dan kualitas hidup pengguna, tetapi
+                        juga mendukung tujuan keberlanjutan lingkungan. Aplikasi ini menawarkan kemudahan, efisiensi,
+                        dan
+                        aksesibilitas yang dibutuhkan untuk menciptakan pengalaman smart home yang lebih terhubung dan
+                        ramah
+                        lingkungan. Wilink berpotensi menjadi alat yang penting dalam mewujudkan kota-kota pintar yang
+                        lebih
+                        efisien dan berkelanjutan.
+                    </p>
+                </div>
+
+                <!-- faq (LEFT) -->
+                <div class="frequently-ask-questions-container" data-aos="fade-right">
+                    <h2>Pertanyaan yang Sering Diajukan (FAQ)</h2>
+                    <ul class="faq-accordion-container">
+                        <li>
+                            <input type="radio" name="accordion" id="first" checked />
+                            <label class="faq-accordion-label" for="first">
+                                Apa Yang Membuat Wilink Berbeda dari Aplikasi Smart Home Lainnya?</label>
+                            <div class="content">
+                                <p>
+                                    Wilink membedakan dirinya dari aplikasi smart home lainnya dengan fitur integrasi
+                                    energi terbarukan dan fokus pada pengelolaan energi yang efisien. Selain menawarkan
+                                    kontrol perangkat pintar seperti lampu dan AC, Wilink juga memungkinkan pengguna
+                                    untuk memantau dan mengatur konsumsi energi dari sumber terbarukan seperti panel
+                                    surya. Ini menjadikannya solusi komprehensif yang mendukung tujuan keberlanjutan dan
+                                    efisiensi energi dalam konteks smart city.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="accordion" id="second" />
+                            <label class="faq-accordion-label" for="second">Bagaimana Wilink Menjamin Kualitas dan
+                                Keberhasilan Proyek?</label>
+                            <div class="content">
+                                <p>
+                                    Wilink menjamin kualitas dan keberhasilan proyek melalui serangkaian langkah
+                                    pengembangan dan evaluasi yang ketat. Tim pengembang kami terdiri dari profesional
+                                    berpengalaman di bidang teknologi smart home dan energi terbarukan. Kami juga
+                                    melakukan pengujian menyeluruh untuk memastikan aplikasi berfungsi dengan baik di
+                                    berbagai perangkat dan lingkungan. Selain itu, kami berkomitmen untuk transparansi
+                                    dengan menyediakan pembaruan rutin kepada para investor dan pengguna tentang
+                                    kemajuan dan pencapaian proyek.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="accordion" id="third" />
+                            <label class="faq-accordion-label" for="third">Bagaimana Keamanan Data Pengguna Dijamin oleh
+                                Wilink?</label>
+                            <div class="content">
+                                <p>
+                                    Wilink sangat memperhatikan keamanan data pengguna. Aplikasi ini dilengkapi dengan
+                                    protokol keamanan yang ketat untuk melindungi informasi pribadi dan data penggunaan
+                                    energi. Semua komunikasi antar perangkat dan server Wilink dienkripsi untuk mencegah
+                                    akses tidak sah. Selain itu, Wilink secara rutin melakukan audit keamanan dan
+                                    pembaruan sistem untuk memastikan bahwa data pengguna tetap aman dari ancaman siber.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="accordion" id="fourth" />
+                            <label class="faq-accordion-label" for="fourth">Bagaimana Jika Kampanye Urun Dana Wilink
+                                Tidak Mencapai Target Pendanaan?</label>
+                            <div class="content">
+                                <p>
+                                    Jika kampanye urun dana Wilink tidak mencapai target pendanaan yang ditetapkan, kami
+                                    akan mengikuti ketentuan yang berlaku di platform crowdfunding yang kami gunakan.
+                                    Biasanya, ini berarti bahwa dana yang sudah diinvestasikan akan dikembalikan kepada
+                                    para investor. Namun, kami tetap berkomitmen untuk mengembangkan Wilink dan akan
+                                    mencari alternatif pendanaan lain untuk memastikan proyek ini dapat terus berjalan
+                                    dan mencapai tujuannya.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of faq (LEFT) -->
+            </div>
+
+            <!-- RIGHT CONTAINER -->
+            <div class="overall-right-container">
+
+                <!-- mengenal inovator (RIGHT) -->
+                <div class="mengenal-inovator-container" data-aos="fade-left">
+                    <h1>Mengenal Inovator</h1>
+                    <div class="inovator-box">
+                        <img class="profile-picture" src="Assets/images/Profile_Pictures/1.jpg"
+                            alt="Image not loading" />
+                        <div class="inovator-info">
+                            <h2>Team Arikappucino</h2>
+                            <div class="user-statistics-container">
+                                <div class="user-statistics">
+                                    <h3>1</h3>
+                                    <p>Petisi diajukan</p>
+                                </div>
+                                <div class="user-statistics">
+                                    <h3>1</h3>
+                                    <p>Urun Dana Diajukan</p>
+                                </div>
+                                <div class="user-statistics">
+                                    <h3>4</h3>
+                                    <p>Tanda Tangan Petisi</p>
+                                </div>
+                                <div class="user-statistics">
+                                    <h3>1</h3>
+                                    <p>Kontribusi Urun dana</p>
+                                </div>
+                            </div>
+                            <div class="biodata">
+                                <h4>Biodata</h4>
+                                <p>
+                                    Kami adalah tim developer yang memiliki visi untuk meningkatkan efisiensi dalam
+                                    berbagai aspek kehidupan sehari-hari melalui penerapan teknologi canggih. Dengan
+                                    semangat inovasi dan dedikasi tinggi, kami berusaha untuk menciptakan solusi yang
+                                    tidak hanya mempermudah rutinitas harian, tetapi juga meningkatkan produktivitas dan
+                                    kualitas hidup.
+                                </p>
+                            </div>
+                            <div class="achivement-join-date">
+                                <h2>Inovator Unggulan</h2>
+                                <p>Bergabung pada 1 Desember 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of mengenal inovator (RIGHT) -->
+
+                <!-- linimasa pengembangan (RIGHT) -->
+                <div class="linimasa-pengembangan-container">
+                    <h2>Linimasa Pengembangan</h2>
+                    <div class="linimasa">
+                        <div class="content-linimasa" data-aos="fade-left">
+                            <h3>Q1 2023: Konsep dan Perencanaan Awal</h3>
+                            <h4>Pada Q1 2023, tahap awal melibatkan definisi konsep aplikasi dan riset pasar untuk
+                                memahami kebutuhan pengguna.
+                                <span style="color: #84C318; font-weight: 600;">Sudah terpenuhi</span>
+                            </h4>
+                        </div>
+                        <div class="content-linimasa" data-aos="fade-left">
+                            <h3>Q3 2023: Pengembangan Versi Beta</h3>
+                            <h4>Di Q3 2023, fokus beralih ke desain UI/UX dan pengembangan fitur inti seperti kontrol
+                                perangkat pintar dan integrasi energi terbarukan.
+                                <span style="color: #84C318; font-weight: 600;">Sudah terpenuhi</span>
+                            </h4>
+                        </div>
+                        <div class="content-linimasa" data-aos="fade-left">
+                            <h3>Q1 2024: Peluncuran Versi Beta dan Uji Coba</h3>
+                            <h4>Q1 2024 menandai peluncuran versi beta dan uji coba fitur untuk mengumpulkan umpan balik
+                                dan melakukan perbaikan.
+                                <span style="color: #84C318; font-weight: 600;">Dalam Proses</span>
+                            </h4>
+                        </div>
+                        <div class="content-linimasa" data-aos="fade-left">
+                            <h3>Q3 2024: Peluncuran Resmi dan Ekspansi Fitur</h3>
+                            <h4>Q3 2024 akan dilaksanakan kampanye pengumpulan dana sebagai persiapan untuk peluncuran
+                                resmi, ekspansi fitur, dan integrasi dengan mitra produk smart home.
+                                <span style="color: #84C318; font-weight: 600;">Dalam Proses</span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of linimasa pengembangan (RIGHT) -->
+
+                <!-- alokasi dana (RIGHT) -->
+                <div class="alokasi-dana-container" data-aos="fade-left">
+                    <h2>Alokasi Dana</h2>
+                    <div class="alokasi-dana-content-container">
+                        <div class="statistik-alokasi-dana-container">
+                            <div class="statistik-alokasi-dana"></div>
+                            <p>Diperbarui 12 Hari yang lalu.</p>
+                        </div>
+                        <div class="alokasi-dana-deskripsi-container">
+                            <div class="deskripsi-content">
+                                <div class="alokasi-dana-items">
+                                    <div class="alokasi-dana-circle-text">
+                                        <div class="alokasi-dana-circle" style="background-color: #85b45d;"></div>
+                                        <h3>Pengembangan Teknologi (40%)</h3>
+                                    </div>
+                                    <p>Biaya untuk desain aplikasi, pengembangan fitur, dan perbaikan bug.</p>
+                                </div>
+                                <div class="alokasi-dana-items">
+                                    <div class="alokasi-dana-circle-text">
+                                        <div class="alokasi-dana-circle" style="background-color: #503d42;"></div>
+                                        <h3>Pemasaran dan Kampanye (25%)</h3>
+                                    </div>
+                                    <p>Anggaran untuk iklan, promosi, dan kampanye pengumpulan dana.</p>
+                                </div>
+                                <div class="alokasi-dana-items">
+                                    <div class="alokasi-dana-circle-text">
+                                        <div class="alokasi-dana-circle" style="background-color: #92ad94;"></div>
+                                        <h3>Kemitraan dan Integrasi (20%)</h3>
+                                    </div>
+                                    <p>Biaya untuk kemitraan dengan produsen dan integrasi sistem.</p>
+                                </div>
+                                <div class="alokasi-dana-items">
+                                    <div class="alokasi-dana-circle-text">
+                                        <div class="alokasi-dana-circle" style="background-color: #9ae21c;"></div>
+                                        <h3>Operasional dan Administrasi (15%)</h3>
+                                    </div>
+                                    <p>Pengeluaran untuk administrasi, gaji tim, dan cadangan kontinjensi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of alokasi dana (RIGHT) -->
+
+                <!-- galeri (RIGHT) -->
+                <div class="galeri-container" data-aos="fade-left">
+                    <h2>Galeri Produk</h2>
+                    <div class="slider">
+                        <button class="previous" aria-label="Previous slide">&#10094;</button>
+                        <div class="slides-container">
+                            <div class="slides">
+                                <img src="Assets/wilink/galeri_1.png" alt="Product 1" />
+                                <img src="Assets/wilink/galeri_2.png" alt="Product 2" />
+                                <img src="Assets/wilink/galeri_3.png" alt="Product 3" />
+                            </div>
+                        </div>
+                        <button class="next" aria-label="Next slide">&#10095;</button>
+                    </div>
+                </div>
+                <!-- end of galeri (RIGHT) -->
+            </div>
+        </div>
+
+        <!-- pilih opsi pendanaan -->
+        <section id="opsi-pendanaan-urun-dana">
+            <div class="container-opsi-pendanaan">
+                <div class="title-opsi-pendanaan" data-aos="zoom-in">
+                    <h2>Pilih Opsi Pendanaan</h2>
+                </div>
+                <div class="down-container">
+                    <div class="container-card" data-aos="fade-down" data-aos-delay="200" data-aos-offset="150">
+                        <div class="top-container">
+                            <img src="Assets/wilink/Silver.png" alt="Image not loading">
+                        </div>
+                        <div class="bottom-container">
+                            <div class="title-price">
+                                <h3>WiSupporter Silver</h3>
+                                <h4>IDR 250.000</h4>
+                            </div>
+                            <p>
+                                Benefit dari Wisupporter Silver: <br><br>
+                                Akses Awal ke Aplikasi: Dapatkan akses eksklusif ke versi beta aplikasi Wilink sebelum
+                                peluncuran resmi. <br><br>
+                                Diskon 10% untuk Pembelian Produk Smart Home: Nikmati diskon khusus saat membeli produk
+                                smart home melalui fitur store dalam aplikasi. <br><br>
+                                Terima Terima Kasih Digital: Sertifikat penghargaan digital sebagai bentuk apresiasi
+                                atas
+                                dukungan Anda.
+                            </p>
+                            <div class="detail">
+                                <div>
+                                    <h3><span style="font-size: 14px; color: #84c318; font-weight: 600;">25
+                                            Orang</span><br>
+                                        dari target 25 Orang <br>
+                                        Telah berkontribusi. <br> <br>
+                                    </h3>
+                                </div>
+                                <div>
+                                    <h4>Perkiraan Rilis Beta:<br><b>Januari 2025</b></h3>
+                                </div>
+                            </div>
+                            <button>Danai IDR 250.000</button>
+                        </div>
+                    </div>
+                    <div class="container-card" data-aos="fade-down">
+                        <div class="top-container">
+                            <img src="Assets/wilink/Diamond.png" alt="Image not loading">
+                        </div>
+                        <div class="bottom-container">
+                            <div class="title-price">
+                                <h3>WiSupporter Diamond</h3>
+                                <h4>IDR 1.000.000</h4>
+                            </div>
+                            <p>Dapatkan benefit ekslusif Diamond: <br><br>
+                                Diskon 20% untuk Pembelian Produk Smart Home: Nikmati diskon maksimal saat membeli
+                                produk
+                                smart home melalui fitur store dalam aplikasi. <br><br>
+                                Akses VIP ke Peluncuran Produk: Undangan eksklusif untuk acara peluncuran produk
+                                Wilink<br><br>
+                                Paket Premium Aplikasi: Dapatkan akses gratis selama satu tahun ke paket premium
+                                aplikasi
+                                Wilink.</p>
+                            <div class="detail">
+                                <div>
+                                    <h3><span style="font-size: 14px; color: #84c318; font-weight: 600;">25
+                                            Orang</span><br>
+                                        dari target 25 Orang <br>
+                                        Telah berkontribusi. <br> <br>
+                                    </h3>
+                                </div>
+                                <div>
+                                    <h4>Perkiraan Rilis Beta:<br><b>Januari 2025</b></h3>
+                                </div>
+                            </div>
+                            <button>Danai IDR 1.000.000</button>
+                        </div>
+                    </div>
+                    <div class="container-card" data-aos="fade-down" data-aos-delay="200" data-aos-offset="150">
+                        <div class="top-container">
+                            <img src="Assets/wilink/Gold.png" alt="Image not loading">
+                        </div>
+                        <div class="bottom-container">
+                            <div class="title-price">
+                                <h3>WiSupporter Gold</h3>
+                                <h4>IDR 500.000</h4>
+                            </div>
+                            <p>
+                                Semua Benefit dari Silver, Ditambah: <br><br>
+                                Konsultasi Energi Gratis: Dapatkan sesi konsultasi energi gratis untuk membantu
+                                mengoptimalkan penggunaan energi di rumah Anda. <br><br>
+                                Fitur Eksklusif: Akses fitur tambahan dalam aplikasi yang hanya tersedia untuk supporter
+                                tingkat ini. <br><br>
+                                Nama Anda di Halaman Terima Kasih: Nama Anda akan dicantumkan di halaman terima kasih di
+                                aplikasi sebagai bentuk apresiasi atas dukungan Anda.
+                            </p>
+                            <div class="detail">
+                                <div>
+                                    <h3><span style="font-size: 14px; color: #84c318; font-weight: 600;">25
+                                            Orang</span><br>
+                                        dari target 25 Orang <br>
+                                        Telah berkontribusi. <br> <br>
+                                    </h3>
+                                </div>
+                                <div>
+                                    <h4>Perkiraan Rilis Beta:<br><b>Januari 2025</b></h3>
+                                </div>
+                            </div>
+                            <button>Danai IDR 500.000</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of pilih opsi pendanaan -->
+
+        <!-- comment dan urun dana lainnya -->
+        <div class="container-comment-urun-dana-lainnya">
+            <div class="comment-left-container">
+                <div class="title-submit-and-sort-up-container">
+                    <div class="title">
+                        <h2 id="comment-title">0 Komentar</h2>
+                    </div>
+                    <div class="comment-content-container">
+                        <div class="comment-form">
+                            <input type="text" id="comment-input" placeholder="Add a comment...">
+                            <button id="post-button">Post</button>
+                        </div>
+                    </div>
+                    <div class="sort-by-container">
+                        <h2>Urutkan Berdasarkan: </h2>
+                        <div class="comment-controls">
+                            <button class="sort-button" data-sort="latest">Terbaru</button>
+                            <button class="sort-button" data-sort="oldest">Terlama</button>
+                            <button class="sort-button" data-sort="mostLiked">Disukai</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-down-container">
+                    <div id="comments" class="comments"></div>
+                </div>
+            </div>
+            <div class="lainnya-right-container">
+                <h2>Urun Dana Lainnya</h2>
+                <div class="lainnya-container">
+                    <div class="lainnya" data-aos="fade-left" data-aos-delay="200">
+                        <div class="lainnya-left">
+                            <img src="Assets/images/10_culture.jpg" alt="Image not loading">
+                        </div>
+                        <div class="lainnya-right">
+                            <div class="profile">
+                                <img src="Assets/images/Profile_Pictures/1.jpg" alt="Image not loading">
+                                <p>Andre Mahaputra Tedja Â· <span style="font-weight: 300; font-size: 12px;">10 Februari
+                                        2024</span>
+                                <p>
+                            </div>
+                            <h2>Nusanculture: Aplikasi interaktif pengenal budaya-budaya indonesia</h2>
+                            <div class="category">
+                                <h4>Aplikasi</h4>
+                                <h4>Edukasi</h4>
+                            </div>
+                            <h3><span style="color: #84C318;">IDR 12.000.000</span> Didanai Â· <span
+                                    style="color: #84C318;">IDR 20.000.000</span> Target</h3>
+                        </div>
+                    </div>
+                    <div class="lainnya" data-aos="fade-left" data-aos-delay="200">
+                        <div class="lainnya-left">
+                            <img src="Assets/images/11_kerupuk.jpg" alt="Image not loading">
+                        </div>
+                        <div class="lainnya-right">
+                            <div class="profile">
+                                <img src="Assets/images/Profile_Pictures/1.jpg" alt="Image not loading">
+                                <p>Naruto Uzumaki Â· <span style="font-weight: 300; font-size: 12px;">24 Februari
+                                        2024</span>
+                                <p>
+                            </div>
+                            <h2>Kerupuk Onigiri: Kombinasi rasa Indonesia dengan Jepang yang gurih</h2>
+                            <div class="category">
+                                <h4>Makanan</h4>
+                            </div>
+                            <h3><span style="color: #84C318;">IDR 5.000.000</span> Didanai Â· <span
+                                    style="color: #84C318;">IDR 5.200.000</span> Target</h3>
+                        </div>
+                    </div>
+                    <div class="lainnya" data-aos="fade-left" data-aos-delay="200">
+                        <div class="lainnya-left">
+                            <img src="Assets/images/12_romantic.jpg" alt="Image not loading">
+                        </div>
+                        <div class="lainnya-right">
+                            <div class="profile">
+                                <img src="Assets/images/Profile_Pictures/1.jpg" alt="Image not loading">
+                                <p>Ananda Terano Â· <span style="font-weight: 300; font-size: 12px;">2 Maret 2024 </span>
+                                <p>
+                            </div>
+                            <h2>Romeo and Juliet: Film Romantis yang meluluhkan hati</h2>
+                            <div class="category">
+                                <h4>Video</h4>
+                            </div>
+                            <h3><span style="color: #84C318;">IDR 2.500.000</span> Didanai Â· <span
+                                    style="color: #84C318;">IDR 3.000.000</span> Target</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of comment dan urun dana lainnya -->
+
+        <!-- bagian bawah -->
+        <div class="container-bawah">
+            <div class="left-section">
+                <div class="heart-icon">
+                    <img src="Assets/icons/finaneicon.png" alt="Image not loading">
+                </div>
+                <p>Jangan biarkan masalah finansial menghambat inovasimu.</p>
+            </div>
+            <div class="right-section">
+                <p>Dengan fitur Urun Dana, kamu dapat memberikan kesempatan bagi publik untuk membantu ide cemerlangmu
+                    menjadi realita. Fokus untuk membuat sebuah inovasi luar biasa, dan hapus halangan finansial yang
+                    ada sekarang!
+                    <br>
+                    Bersama, kita wujudkan inovasi yang berguna untuk masa depan!
+                </p>
+                <button>Mulai Urun Dana</button>
+            </div>
+        </div>
+        <!-- end of bagian bawah -->
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <section id="footer">
+            <div class="footer-container">
+                <div class="upper-footer">
+                    <div class="logo-and-description">
+                        <img src="Assets/Idearise_logo/1.png" alt="Image not loading">
+                        <p class="line-footer-1"></p>
+                        <h3>Idearise adalah platform yang membantu para inovator untuk mengembangkan ide inovatif mereka
+                            melalui dukungan suara dan dana dari publik.</h3>
+                    </div>
+                    <div class="location">
+                        <h2>Lokasi Kami</h2>
+                        <p>
+                            <span style="font-weight: 600;">SMA Negeri 4 Denpasar</span>
+                            <br>
+                            <span>Jl. Gunung Rinjani No.1, Tegal Harum, Kec. Denpasar Bar., Kota Denpasar, Bali.</span>
+                            <br><br>
+                            <span>Gedung B4, Lantai 1, Kelas XII.13</span>
+                        </p>
+                    </div>
+                    <div class="contact">
+                        <h2>Hubungi Kami</h2>
+                        <p>
+                            <span>Sosial Media:</span>
+                        </p>
+                        <div>
+                            <div class="facebook">
+                                <i class="fa fa-facebook"></i>
+                            </div>
+                            <div class="instagram">
+                                <i class="fa fa-instagram"></i>
+                            </div>
+                            <div class="twitter-x">
+                                <i class="fa fa-twitter"></i>
+                            </div>
+                        </div>
+                        <p>
+                            <br>
+                            <span>Call Support: (0361) 485363</span>
+                            <br>
+                            <span>Fax: 000-000-0000</span>
+                            <br>
+                            <span>Email: idearise@support.com</span>
+                        </p>
+                    </div>
+                    <div class="navigasi">
+                        <h2>Navigasi</h2>
+                        <div>
+                            <div>
+                                <a href="home.html">Beranda</a>
+
+                            </div>
+                            <div>
+                                <a href="tentangKami.html">Tentang Kami</a>
+                            </div>
+                            <div>
+                                <a href="petisi.html">Petisi</a>
+                            </div>
+                            <div>
+                                <a href="urunDana.html">Urun Dana</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="petisi-unggulan">
+                        <h2>Petisi Unggulan</h2>
+                        <div>
+                            <div>
+                                <a href="woney.html">Woney</a>
+                            </div>
+                            <div>
+                                <a href="#">Harmony Hub</a>
+                            </div>
+                            <div>
+                                <a href="#">Rendang Chips</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="urun-dana-unggulan">
+                        <h2>Urun Dana Unggulan</h2>
+                        <div>
+                            <div>
+                                <a href="WiLink.html">WiLink</a>
+                            </div>
+                            <div>
+                                <a href="#">Nusanculture</a>
+                            </div>
+                            <div>
+                                <a href="#">Kerupuk Onigiri</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="down-footer">
+                    <p class="line-footer-2"></p>
+                    <h2>Copyright &copy; 2024 Idearise. <b>All Rights Reserved.</b>
+                        <br>
+                        By Team_Araselatte <i class="fas fa-coffee"></i>
+                    </h2>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- end of footer -->
+
+    <!-- ANIMATION AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

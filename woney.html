@@ -1,0 +1,625 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woney: financial superapp, aplikasi FINANCE SAKTI! atur tabungan SERTA INVESTASI DI SATU APLIKASI.</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Assets/images/favicon.png">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/woney.css">
+
+    <!-- Javascript -->
+    <script src="js/script.js"></script>
+    <script src="js/woney.js"></script>
+
+    <!-- Animation AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <!-- Icons FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/f90068558c.js" crossorigin="anonymous"></script>
+
+    <!-- Fonts GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Loading -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    <!-- end of Loading -->
+
+    <!-- navigasi -->
+    <header>
+        <nav class="navigation">
+            <div class="logo-left">
+                <a href="home.html">
+                    <img class="logo-nav" src="Assets/Idearise_logo/6.png" alt="Logo Idearise">
+                </a>
+            </div>
+            <div class="nav-middle" id="nav-middle">
+                <a href="home.html" class="nav-link">Beranda</a>
+                <a href="tentangKami.html" class="nav-link">Tentang Kami</a>
+                <a href="petisi.html" class="nav-link active" id="nav-link-active">Petisi</a>
+                <a href="urunDana.html" class="nav-link">Urun Dana</a>
+                <div class="underline" id="underline"></div>
+            </div>
+            <div class="button-right">
+                <a href="#" class="daftar-button">Daftar</a>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-bars"></i> Menu</button>
+                <div class="dropdown-content">
+                    <a href="home.html">Beranda</a>
+                    <a href="tentangKami.html">Tentang Kami</a>
+                    <a href="petisi.html">Petisi</a>
+                    <a href="urunDana.html">Urun Dana</a>
+                    <a href="#" class="daftar-link">Daftar</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- end of navigasi -->
+
+    <main>
+        <!-- MainPetisi_Woney -->
+        <section id="MainPetisi_woney">
+            <div class="petisi-title-container" data-aos="zoom-in">
+                <h4>Petisi</h4>
+                <h1>Woney: financial superapp, aplikasi FINANCE SAKTI! atur tabungan SERTA INVESTASI DI SATU APLIKASI.
+                </h1>
+            </div>
+            <div class="petisi-content-container">
+                <div class="petisi-content-left-container" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="Assets/woney/woney.png" alt="Image not loading">
+                    <div class="category">
+                        <h3>Populer</h3>
+                        <h3>Unggulan</h3>
+                        <h4>Aplikasi</h4>
+                        <h4>Teknologi</h4>
+                    </div>
+                </div>
+                <div class="petisi-content-right-container" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="petisi-content-right-up-container">
+                        <div class="userinfo">
+                            <div class="profile-picture">
+                                <img src="Assets/images/Profile_Pictures/1.jpg" alt="pfp">
+                            </div>
+                            <div class="username-and-date">
+                                <h2>Team Adelatte</h2>
+                                <p>7 Januari 2024</p>
+                            </div>
+                        </div>
+                        <div class="terverifikasi">
+                            <h3><i class="fas fa-check-circle" style="color: green;"></i></h3>
+                            <h2>Terverifikasi</h2>
+                        </div>
+                    </div>
+                    <div class="petisi-content-right-down-container">
+                        <div class="petisi-content-right-down-statistics">
+                            <div class="circle">
+                                <svg width="150" height="200" viewBox="0 0 100 100">
+                                    <circle class="bg" cx="50" cy="50" r="40" fill="none" stroke="#ddd"
+                                        stroke-width="15"></circle>
+                                    <circle class="fg" cx="50" cy="50" r="40" fill="none" stroke="#6cbf1f"
+                                        stroke-width="15" stroke-dasharray="260"></circle>
+                                    <text style="font-weight: 600;" x="50" y="55" text-anchor="middle" font-size="20"
+                                        fill="#6cbf1f">100%</text>
+                                </svg>
+                                <p>
+                                    <span style="color: #84c318; font-size: 18px; font-weight: 600;">30.000</span><br>
+                                    orang telah <br> menandatangani <br>petisi.
+                                    <br><br>
+                                    <b>Target: </b><span
+                                        style="color: #84c318; font-size: 18px; font-weight: 600;">30.000</span></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="petisi-content-right-down-form">
+                            <form>
+                                <div class="form-group">
+                                    <label class="form-petisi" for="nama-awal">Nama:</label>
+                                    <div>
+                                        <input type="text" id="nama-awal" name="nama-awal" placeholder="Nama Awal...">
+                                        <input type="text" id="nama-akhir" name="nama-akhir"
+                                            placeholder="Nama Akhir...">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Kontak:</label>
+                                    <div>
+                                        <input type="email" id="email" name="email" placeholder="Alamat Email...">
+                                        <input type="tel" id="tel" name="tel" placeholder="No. Telp...">
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="asal">Asal:</label>
+                                    <input type="text" id="asal" name="asal" placeholder="Provinsi dan Kota...">
+                                </div>
+                                <input type="checkbox" id="setuju-tandatangan-checkbox" name="setuju-tandatangan">
+                                <label for="setuju-tandatangan" id="setuju-tandatangan-checkbox-label"> Saya
+                                    menandatangani petisi ini sepenuhnya dengan keinginan saya tanpa tekanan dari pihak
+                                    lain.</label><br>
+                            </form>
+                            <div class="petisi-btn-container">
+                                <button class="petisi-tanda-tangani-btn">Tanda Tangani Petisi Ini</button>
+                                <button class="petisi-share-btn"><i class="fas fa-share"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of MainPetisi_Woney -->
+
+        <!-- ALL CONTAINER -->
+        <div class="overall-container">
+
+            <!-- LEFT SIDE CONTAINER -->
+            <div class="overall-left-container">
+
+                <!-- deskripsi (LEFT) -->
+                <div class="container-page-deskripsi" data-aos="fade-right">
+                    <h2>Deskripsi</h2>
+                    <p>
+                        Woney adalah aplikasi super app yang dirancang khusus untuk membantu masyarakat Indonesia
+                        mengelola keuangan mereka dengan lebih baik dan bijak. Dilengkapi dengan Boni, asisten berbasis
+                        Artificial Intelligence, Woney menawarkan solusi interaktif untuk membantu pengguna mengatur
+                        keuangan pribadi mereka dengan lebih efektif. Mulai dari cara membagi keuangan menurut skala
+                        prioritas, pentingnya memiliki dana darurat, hingga pengetahuan tentang pasar saham dan
+                        investasi, Woney memastikan setiap pengguna mendapatkan panduan yang mudah dipahami dan
+                        diaplikasikan.
+                        <br><br>
+
+                        Di tengah rendahnya literasi keuangan di Indonesia, Woney hadir sebagai jawaban atas kebutuhan
+                        akan edukasi keuangan yang praktis dan mudah diakses. Dengan fitur-fitur interaktif yang
+                        ditawarkan, pengguna akan belajar secara real-time bagaimana mengelola uang dingin dan uang
+                        panas, serta memahami pentingnya perencanaan keuangan yang matang. Woney dirancang untuk
+                        membantu pengguna menghindari kesalahan dalam pengelolaan keuangan yang sering berujung pada
+                        masalah hutang dan ketidakstabilan finansial.
+                        <br><br>
+                        Salah satu masalah utama yang dihadapi masyarakat saat ini adalah maraknya penggunaan layanan
+                        pinjaman online. Dengan data yang menunjukkan 64,8 juta penduduk Indonesia telah menggunakan
+                        layanan ini, dengan total pinjaman mencapai Rp 221,56 triliun, Woney bertujuan untuk memberikan
+                        solusi yang tepat melalui edukasi keuangan yang mendalam. Dengan pemahaman yang lebih baik
+                        tentang literasi keuangan, diharapkan pengguna dapat mengurangi ketergantungan pada pinjaman
+                        online dan mengelola keuangan mereka dengan lebih baik.
+                        <br>
+                    </p>
+                    <img src="Assets/woney/learn.png" alt="Image not loading"
+                        style="width: 100%; border-radius: 20px;">
+                    <p>
+                        <br>
+
+                        Kemudahan akses adalah salah satu keunggulan utama Woney. Dengan antarmuka yang user-friendly,
+                        pengguna dapat dengan mudah mengakses berbagai fitur dan mendapatkan panduan keuangan yang
+                        sesuai dengan kebutuhan mereka. Woney memastikan bahwa setiap pengguna, baik yang pemula maupun
+                        yang sudah berpengalaman, dapat memanfaatkan aplikasi ini untuk mencapai tujuan keuangan mereka.
+                        <br><br>
+
+                        Woney tidak hanya berfokus pada pengelolaan keuangan sehari-hari, tetapi juga memberikan
+                        pengetahuan mendalam tentang investasi dan pasar saham. Dengan bantuan Boni, pengguna dapat
+                        belajar tentang berbagai instrumen investasi dan cara mengoptimalkan pengelolaan aset mereka.
+                        Ini membuat Woney menjadi mitra yang sempurna untuk siapa saja yang ingin memperluas pengetahuan
+                        mereka tentang dunia finansial dan meningkatkan kesejahteraan ekonomi mereka.
+                        <br><br>
+
+                        Selain memberikan edukasi dan panduan, Woney juga menawarkan berbagai alat dan fitur yang
+                        memudahkan pengguna dalam merencanakan dan mengelola keuangan mereka. Mulai dari kalkulator
+                        keuangan, pengingat pembayaran, hingga analisis pengeluaran, semua fitur ini dirancang untuk
+                        membantu pengguna mengelola keuangan dengan lebih baik dan mencapai stabilitas finansial. Woney
+                        memastikan bahwa pengguna memiliki semua alat yang mereka butuhkan untuk meraih kesejahteraan
+                        finansial.
+                        <br><br>
+                        <img src="Assets/woney/save-and-invest.png" alt="Image not loading"
+                            style="width: 100%; border-radius: 20px;">
+
+                        Dengan Woney, pengguna tidak hanya mendapatkan aplikasi pengelola keuangan, tetapi juga mitra
+                        edukasi yang siap membantu mereka memahami dan mengelola keuangan dengan lebih baik. Woney
+                        adalah solusi komprehensif untuk meningkatkan literasi keuangan dan membantu masyarakat
+                        Indonesia mencapai stabilitas dan kesejahteraan finansial. Dengan pendekatan yang inovatif dan
+                        teknologi AI canggih, Woney siap menjadi sahabat keuangan Anda dalam setiap langkah menuju masa
+                        depan yang lebih cerah.
+                    </p>
+                </div>
+                <!-- end of deskripsi (LEFT) -->
+            </div>
+
+            <!-- RIGHT SIDE CONTAINER -->
+            <div class="overall-right-container">
+
+                <!-- mengenal inovator (RIGHT) -->
+                <div class="mengenal-inovator-container" data-aos="fade-left">
+                    <h1>Mengenal Inovator</h1>
+                    <div class="inovator-box">
+                        <img class="profile-picture" src="Assets/images/Profile_Pictures/1.jpg"
+                            alt="Image not loading" />
+                        <div class="inovator-info">
+                            <h2>Team AdeLatte</h2>
+                            <div class="user-statistics-container">
+                                <div class="user-statistics">
+                                    <h3>5</h3>
+                                    <p>Petisi diajukan</p>
+                                </div>
+                                <div class="user-statistics">
+                                    <h3>3</h3>
+                                    <p>Urun Dana Diajukan</p>
+                                </div>
+                                <div class="user-statistics">
+                                    <h3>9</h3>
+                                    <p>Tanda Tangan Petisi</p>
+                                </div>
+                                <div class="user-statistics">
+                                    <h3>6</h3>
+                                    <p>Kontribusi Urun dana</p>
+                                </div>
+                            </div>
+                            <div class="biodata">
+                                <h4>Biodata</h4>
+                                <p>
+                                    Kami adalah tim inovatif yang terdiri dari para profesional berdedikasi di bidang
+                                    teknologi dan keuangan. Dengan keahlian dalam Artificial Intelligence dan pemahaman
+                                    mendalam tentang literasi keuangan, Kami berkomitmen untuk menciptakan solusi
+                                    keuangan yang interaktif dan efektif guna membantu masyarakat Indonesia mengelola
+                                    keuangan mereka dengan lebih baik dan mencapai kesejahteraan finansial.
+                                </p>
+                            </div>
+                            <div class="achivement-join-date">
+                                <h2>Inovator Unggulan</h2>
+                                <p>Bergabung pada 1 Oktober 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of mengenal inovator (RIGHT) -->
+
+                <!-- faq (RIGHT) -->
+                <div class="frequently-ask-questions-container" data-aos="fade-left">
+                    <h2>Pertanyaan yang Sering Diajukan (FAQ)</h2>
+                    <ul class="faq-accordion-container">
+                        <li>
+                            <input type="radio" name="accordion" id="first" checked />
+                            <label class="faq-accordion-label" for="first">
+                                Apa yang membuat Woney berbeda dari aplikasi keuangan lainnya?</label>
+                            <div class="content">
+                                <p>
+                                    Woney menawarkan pendekatan interaktif dengan bantuan Boni, asisten AI yang
+                                    memberikan panduan real-time dan edukasi keuangan. Aplikasi ini tidak hanya membantu
+                                    dalam pengelolaan keuangan sehari-hari tetapi juga memberikan pengetahuan mendalam
+                                    tentang investasi dan pasar saham, serta solusi praktis untuk menghindari jebakan
+                                    hutang.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="accordion" id="second" />
+                            <label class="faq-accordion-label" for="second">Apakah Woney akan menyediakan berbagai macam
+                                bahasa?</label>
+                            <div class="content">
+                                <p>
+                                    Untuk Saat ini, kami berencana menambahkan bahasa Indonesia dan Inggris terlebih
+                                    dahulu ke dalam Woney. Kami akan menambahkan lebih banyak bahasa di masa mendatang
+                                    untuk memenuhi kebutuhan pengguna global.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="accordion" id="third" />
+                            <label class="faq-accordion-label" for="third">Apakah Woney dapat digunakan oleh seorang
+                                pemula?</label>
+                            <div class="content">
+                                <p>
+                                    Ya, Woney dirancang untuk digunakan oleh semua orang, baik yang pemula maupun yang
+                                    sudah berpengalaman dalam mengelola keuangan. Antarmuka yang user-friendly dan
+                                    panduan interaktif dari Boni memastikan bahwa setiap pengguna dapat dengan mudah
+                                    memahami dan memanfaatkan fitur-fitur aplikasi ini.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="accordion" id="fourth" />
+                            <label class="faq-accordion-label" for="fourth">Apakah data pribadi saya aman di
+                                Woney?</label>
+                            <div class="content">
+                                <p>
+                                    Keamanan data pribadi pengguna adalah prioritas utama kami. Woney menggunakan
+                                    teknologi enkripsi terbaru untuk melindungi data Anda dan memastikan bahwa informasi
+                                    pribadi Anda tetap aman dan terjaga kerahasiaannya.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="accordion" id="fiveth" />
+                            <label class="faq-accordion-label" for="fiveth">Bagaimana Woney memastikan bahwa informasi
+                                yang diberikan relevan dan up-to-date bagi pengguna?</label>
+                            <div class="content">
+                                <p>
+                                    Woney menggunakan teknologi AI untuk terus memperbarui dan menyempurnakan konten
+                                    edukasinya. Asisten AI Boni secara real-time memberikan informasi terkini dan
+                                    panduan yang relevan berdasarkan kondisi pasar dan perkembangan finansial terbaru.
+                                    Selain itu, Woney juga bekerja sama dengan ahli keuangan dan mengacu pada
+                                    sumber-sumber terpercaya untuk memastikan bahwa pengguna mendapatkan edukasi yang
+                                    valid dan berguna.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <input type="radio" name="accordion" id="sixth" />
+                            <label class="faq-accordion-label" for="sixth">Sejauh mana efektivitas Boni, asisten AI
+                                dalam membantu pengguna mengelola keuangan mereka?</label>
+                            <div class="content">
+                                <p>
+                                    Boni menggunakan algoritma pembelajaran mesin untuk memberikan saran keuangan yang
+                                    dipersonalisasi berdasarkan kebiasaan dan tujuan keuangan pengguna. Woney mengukur
+                                    keberhasilan pengguna melalui pelacakan progres terhadap tujuan yang telah
+                                    ditetapkan, seperti menabung untuk dana darurat atau mengurangi hutang. Feedback
+                                    pengguna dan data penggunaan aplikasi juga dianalisis untuk terus meningkatkan
+                                    efektivitas Boni dalam memberikan saran yang tepat dan membantu pengguna mencapai
+                                    stabilitas finansial.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end of faq (RIGHT) -->
+
+                <!-- berita (RIGHT) -->
+                <div class="berita-container" data-aos="fade-left">
+                    <h2>Berita Terkini</h2>
+                    <div class="berita-content-container">
+                        <div class="berita-content-img-container">
+                            <img src="Assets/woney/boni.png" alt="Image not loading">
+                        </div>
+                        <div class="berita-content-text-container">
+                            <div class="profile">
+                                <img src="Assets/images/Profile_Pictures/1.jpg" alt="Image not loading">
+                                <p>Team Adelatte Â· <span style="font-weight: 300; font-size: 12px;">15 Februari
+                                        2024</span>
+                                <p>
+                            </div>
+                            <h3>
+                                APLIKASI WONEY MENDAPAT RESPON YANG SANGAT POSITIF DARI PUBLIK
+                            </h3>
+                            <h4>
+                                Petisi Aplikasi Woney telah menerima sambutan yang sangat positif dari publik. Aplikasi
+                                ini dirancang untuk memudahkan pengelolaan keuangan pribadi dan memberikan solusi
+                                praktis bagi pengguna dalam mengatur pengeluaran serta menabung.
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of berita (RIGHT) -->
+            </div>
+        </div>
+
+        <!-- comment dan petisi lainnya -->
+        <div class="container-comment-petisi-lainnya">
+            <div class="comment-left-container">
+                <div class="title-submit-and-sort-up-container">
+                    <div class="title">
+                        <h2 id="comment-title">0 Komentar</h2>
+                    </div>
+                    <div class="comment-content-container">
+                        <div class="comment-form">
+                            <input type="text" id="comment-input" placeholder="Add a comment...">
+                            <button id="post-button">Post</button>
+                        </div>
+                    </div>
+                    <div class="sort-by-container">
+                        <h2>Urutkan Berdasarkan: </h2>
+                        <div class="comment-controls">
+                            <button class="sort-button" data-sort="latest">Terbaru</button>
+                            <button class="sort-button" data-sort="oldest">Terlama</button>
+                            <button class="sort-button" data-sort="mostLiked">Disukai</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment-down-container">
+                    <div id="comments" class="comments"></div>
+                </div>
+            </div>
+            <div class="lainnya-right-container">
+                <h2>Petisi Lainnya</h2>
+                <div class="lainnya-container">
+                    <div class="lainnya" data-aos="fade-left" data-aos-delay="200">
+                        <div class="lainnya-left">
+                            <img src="Assets/images/13_music.jpg" alt="Image not loading">
+                        </div>
+                        <div class="lainnya-right">
+                            <div class="profile">
+                                <img src="Assets/images/Profile_Pictures/1.jpg" alt="Image not loading">
+                                <p>Alaric Donovan Â· <span style="font-weight: 300; font-size: 12px;">8 Juni
+                                        2024</span>
+                                <p>
+                            </div>
+                            <h2>Harmony Hub: Alat Musik Digital untuk Kolaborasi Jarak Jauh</h2>
+                            <div class="category">
+                                <h4>Musik</h4>
+                            </div>
+                            <h3><span style="color: #84C318;">12.000</span> Suara Â· <span
+                                    style="color: #84C318;">20.000</span> Target</h3>
+                        </div>
+                    </div>
+                    <div class="lainnya" data-aos="fade-left" data-aos-delay="300">
+                        <div class="lainnya-left">
+                            <img src="Assets/images/14_chips.jpg" alt="Image not loading">
+                        </div>
+                        <div class="lainnya-right">
+                            <div class="profile">
+                                <img src="Assets/images/Profile_Pictures/1.jpg" alt="Image not loading">
+                                <p>Elara Winslow Â· <span style="font-weight: 300; font-size: 12px;">12 Juni
+                                        2024</span>
+                                <p>
+                            </div>
+                            <h2> Rendang Chips : Camilan Sehat dengan Rasa Tradisional Indonesia</h2>
+                            <div class="category">
+                                <h4>Makanan</h4>
+                            </div>
+                            <h3><span style="color: #84C318;">10.000</span> Suara Â· <span
+                                    style="color: #84C318;">15.000</span> Target</h3>
+                        </div>
+                    </div>
+                    <div class="lainnya" data-aos="fade-left" data-aos-delay="300">
+                        <div class="lainnya-left">
+                            <img src="Assets/images/15_forest.jpg" alt="Image not loading">
+                        </div>
+                        <div class="lainnya-right">
+                            <div class="profile">
+                                <img src="Assets/images/Profile_Pictures/1.jpg" alt="Image not loading">
+                                <p>Soren Calder Â· <span style="font-weight: 300; font-size: 12px;">18 Juni 2024 </span>
+                                <p>
+                            </div>
+                            <h2>Film The Forgotten Forest : Petualangan Mistis di Hutan Terlupakan</h2>
+                            <div class="category">
+                                <h4>Video</h4>
+                            </div>
+                            <h3><span style="color: #84C318;">4.000</span> Suara Â· <span
+                                    style="color: #84C318;">10.000</span> Target</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- bagian bawah -->
+        <div class="container-bawah">
+            <div class="left-section">
+                <div class="heart-icon">
+                    <img src="Assets/icons/lampuicon.png" alt="Image not loading">
+                </div>
+                <p>Luapkan ide cemerlangmu, dan mulai ungkapkan ke dunia.</p>
+            </div>
+            <div class="right-section">
+                <p>Jangan pendam ide-idemu. Dengan fitur petisi, kamu dapat mengetahui apakah ide tersebut akan diterima
+                    oleh publik sebagai inovasi revolusioner. Ide kamu akan mendapat perhatian publik, membuka peluang
+                    bagi orang lain untuk membantu mengembangkan ide tersebut lebih lanjut.
+                </p>
+                <button>Mulai Petisi</button>
+            </div>
+        </div>
+        <!-- end of bagian bawah -->
+    </main>
+    <!-- footer -->
+    <footer>
+        <section id="footer">
+            <div class="footer-container">
+                <div class="upper-footer">
+                    <div class="logo-and-description">
+                        <img src="Assets/Idearise_logo/1.png" alt="Image not loading">
+                        <p class="line-footer-1"></p>
+                        <h3>Idearise adalah platform yang membantu para inovator untuk mengembangkan ide inovatif mereka
+                            melalui dukungan suara dan dana dari publik.</h3>
+                    </div>
+                    <div class="location">
+                        <h2>Lokasi Kami</h2>
+                        <p>
+                            <span style="font-weight: 600;">SMA Negeri 4 Denpasar</span>
+                            <br>
+                            <span>Jl. Gunung Rinjani No.1, Tegal Harum, Kec. Denpasar Bar., Kota Denpasar, Bali.</span>
+                            <br><br>
+                            <span>Gedung B4, Lantai 1, Kelas XII.13</span>
+                        </p>
+                    </div>
+                    <div class="contact">
+                        <h2>Hubungi Kami</h2>
+                        <p>
+                            <span>Sosial Media:</span>
+                        </p>
+                        <div>
+                            <div class="facebook">
+                                <i class="fa fa-facebook"></i>
+                            </div>
+                            <div class="instagram">
+                                <i class="fa fa-instagram"></i>
+                            </div>
+                            <div class="twitter-x">
+                                <i class="fa fa-twitter"></i>
+                            </div>
+                        </div>
+                        <p>
+                            <br>
+                            <span>Call Support: (0361) 485363</span>
+                            <br>
+                            <span>Fax: 000-000-0000</span>
+                            <br>
+                            <span>Email: idearise@support.com</span>
+                        </p>
+                    </div>
+                    <div class="navigasi">
+                        <h2>Navigasi</h2>
+                        <div>
+                            <div>
+                                <a href="home.html">Beranda</a>
+
+                            </div>
+                            <div>
+                                <a href="tentangKami.html">Tentang Kami</a>
+                            </div>
+                            <div>
+                                <a href="petisi.html">Petisi</a>
+                            </div>
+                            <div>
+                                <a href="urunDana.html">Urun Dana</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="petisi-unggulan">
+                        <h2>Petisi Unggulan</h2>
+                        <div>
+                            <div>
+                                <a href="woney.html">Woney</a>
+                            </div>
+                            <div>
+                                <a href="#">Harmony Hub</a>
+                            </div>
+                            <div>
+                                <a href="#">Rendang Chips</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="urun-dana-unggulan">
+                        <h2>Urun Dana Unggulan</h2>
+                        <div>
+                            <div>
+                                <a href="WiLink.html">WiLink</a>
+                            </div>
+                            <div>
+                                <a href="#">Nusanculture</a>
+                            </div>
+                            <div>
+                                <a href="#">Kerupuk Onigiri</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="down-footer">
+                    <p class="line-footer-2"></p>
+                    <h2>Copyright &copy; 2024 Idearise. <b>All Rights Reserved.</b>
+                        <br>
+                        By Team_Araselatte <i class="fas fa-coffee"></i>
+                    </h2>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- end of footer -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

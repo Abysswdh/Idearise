@@ -1,0 +1,33 @@
+# Scripts and temporary files
+*.ps1
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Backup files
+*.bak
+*.backup
+
+# Node modules (if using npm in future)
+node_modules/
+
+# Build files
+dist/
+build/
+
+# Environment files
+.env
+.env.local

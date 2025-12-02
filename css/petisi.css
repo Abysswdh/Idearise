@@ -1,0 +1,1569 @@
+* {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5fbef;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Loading */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.26);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.8px);
+  -webkit-backdrop-filter: blur(7.8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  pointer-events: none;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #84c318;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#content {
+  display: none;
+}
+/* end of Loading */
+
+/* navigasi */
+.navigation {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: transparent;
+  position: relative;
+}
+
+.navigation.scrolled {
+  background-color: white;
+  transition: ease-in-out 200ms;
+}
+
+.logo-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-left a img {
+  width: 150px;
+}
+
+.nav-middle {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-middle a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 30px;
+  transition: ease-in-out 200ms;
+  color: #ffffff;
+}
+
+.nav-middle a:hover {
+  scale: 1.1;
+  transition: ease-in-out 200ms;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  background-color: #84c318;
+  transition: left 0.2s ease, width 0.2s ease;
+  border-radius: 15px;
+}
+
+.button-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.daftar-button {
+  color: #503d42;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  text-decoration: none;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  transition: ease-in-out 100ms;
+  scale: 1;
+}
+
+.daftar-button:hover {
+  scale: 1.2;
+  color: white;
+  background-color: #503d42;
+  transition: ease-in-out 100ms;
+}
+
+.dropdown {
+  display: none;
+  position: relative;
+}
+
+.dropbtn {
+  color: #503d42;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  text-decoration: none;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  transition: ease-in-out 100ms;
+  scale: 1;
+  border: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  border-radius: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #503d42;
+  color: white;
+  transition: ease-in-out 100ms;
+}
+
+@media screen and (max-width: 840px) {
+  .nav-middle,
+  .button-right {
+    display: none;
+  }
+
+  .dropdown {
+    display: block;
+  }
+}
+
+/* end of navigasi */
+
+/* HeroImage_petisi */
+#HeroImage_petisi {
+  margin-top: -40px;
+  width: 100dvw;
+  height: 30dvh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#HeroImage_petisi img {
+  top: 0;
+  filter: brightness(0.8);
+  z-index: -10;
+  position: absolute;
+  width: 100dvw;
+  height: 35dvh;
+}
+
+.heroimage-text {
+  text-align: center;
+  color: white;
+}
+
+.heroimage-text h1 {
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  color: #84c318;
+  font-size: 30px;
+}
+
+.heroimage-text h2 {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .heroimage-text h1 {
+    font-size: 1.75rem;
+  }
+  .heroimage-text h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #HeroImage_petisi {
+    height: 25dvh;
+  }
+  #HeroImage_petisi img {
+    height: 25dvh;
+  }
+  .heroimage-text h1 {
+    font-size: 1.5rem;
+  }
+  .heroimage-text h2 {
+    font-size: 1rem;
+  }
+}
+/* end of HeroImage_petisi */
+
+/* petisi populer */
+.petisi-populer {
+  margin: 45px 100px 50px 100px;
+}
+
+.petisi-title-container {
+  display: flex;
+  justify-content: center;
+  color: #503d42d2;
+}
+
+.petisi-title-container h2 {
+  font-family: "Sora", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: #503d42dc;
+}
+
+.petisi-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.petisi-content-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 350px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.petisi-content-up-image-left {
+  width: 50%;
+  height: 100%;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.petisi-content-up-image-left img {
+  border-radius: 20px 0 0 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.petisi-content-up-text-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 50%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.userinfo-and-trending {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2%;
+  width: 100%;
+  height: auto;
+}
+
+.userinfo-and-trending .userinfo {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+}
+
+.userinfo-and-trending .userinfo .profile-picture img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+}
+
+.userinfo-and-trending .userinfo .username-and-date {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+
+.userinfo-and-trending .trending {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.userinfo-and-trending .trending h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #503d42;
+  font-family: "Sora", sans-serif;
+}
+
+.username-and-date h2 {
+  font-family: "Sora", sans-serif;
+  font-weight: 500;
+  color: #503d42;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.username-and-date p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #503d42;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.petisi-content-up-text-right h1 {
+  font-family: "Sora", sans-serif;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 600;
+  color: #503d42;
+  text-decoration: none;
+  margin-top: -25px;
+}
+
+.petisi-content-up-text-right h1:hover {
+  text-decoration: underline;
+}
+
+.petisi-content-up-text-right .description {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #503d42;
+  text-decoration: none;
+  text-align: justify;
+  margin-top: -25px;
+}
+
+.category-and-statistics-populer-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+
+.category-populer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.category-populer h3 {
+  font-size: 12px;
+  padding: 5px 20px 5px 20px;
+  margin: 3px;
+  background-color: #84c318;
+  color: white;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.category-populer h4 {
+  font-size: 12px;
+  padding: 5px 10px 5px 10px;
+  margin: 3px;
+  border: 1px solid #503d42;
+  color: #503d42;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.statistics-populer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 50%;
+  height: 45px;
+}
+
+.statistics-populer div:first-child {
+  border-left: 1px solid #d9d9d9;
+}
+
+.statistics-populer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-right: 1px solid #d9d9d9;
+  padding: 5%;
+}
+
+.statistics-populer h2 {
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  color: #84c318;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.statistics-populer p {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+.petisi-content-down-container {
+  margin-top: 1%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.petisi-content-down-outer-left-container,
+.petisi-content-down-outer-right-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.petisi-content-down {
+  width: 50%;
+  height: 350px;
+}
+
+.petisi-content-down .image {
+  width: 100%;
+  height: 60%;
+}
+
+.petisi-content-down .text .user-info {
+  margin-top: 2%;
+  display: flex;
+  justify-content: row;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  gap: 8px;
+}
+
+.petisi-content-down .text .user-info div:first-child {
+  width: 20px;
+  height: 20px;
+}
+
+.petisi-content-down .text .user-info img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+}
+
+.petisi-content-down div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.petisi-content-down .text .user-info div:nth-child(2) p {
+  color: #503d42;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.petisi-content-down .text h5 {
+  font-weight: 600;
+  font-size: 14px;
+  color: #503d42;
+}
+
+.petisi-content-down .title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #503d42;
+  text-transform: capitalize;
+  margin: 0;
+  padding-right: 4%;
+  transition: ease-in-out 200ms;
+}
+
+.petisi-content-down .title:hover {
+  text-decoration: underline;
+  transition: ease-in-out 200ms;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1230px) {
+  .petisi-populer {
+    margin: 45px 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .petisi-content-up {
+    flex-direction: column;
+    height: auto;
+  }
+  .petisi-content-up-image-left,
+  .petisi-content-up-text-right {
+    width: 100%;
+    border-radius: 20px;
+  }
+  .petisi-content-up-image-left img {
+    border-radius: 20px 20px 0 0;
+  }
+  .petisi-content-up-text-right {
+    border-radius: 0 0 20px 20px;
+    width: 96%;
+    padding-bottom: 2%;
+  }
+  .petisi-content-up-text-right h1 {
+    margin-top: -0px;
+  }
+  .petisi-content-up-text-right .description {
+    margin-top: -5px;
+  }
+  .category-and-statistics-populer-container {
+    flex-direction: row-reverse;
+    gap: 10px;
+  }
+  .statistics-populer {
+    width: 100%;
+  }
+  .statistics-populer div {
+    padding: 2%;
+  }
+  .petisi-content-down-container {
+    flex-direction: column;
+  }
+  .petisi-content-down {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .petisi-title-container h2 {
+    font-size: 20px;
+  }
+  .userinfo-and-trending .trending h2 {
+    font-size: 12px;
+  }
+  .userinfo-and-trending .userinfo .profile-picture img {
+    width: 30px;
+    height: 30px;
+  }
+  .username-and-date h2 {
+    font-size: 12px;
+  }
+  .username-and-date p {
+    font-size: 10px;
+  }
+  .petisi-content-up-text-right h1 {
+    font-size: 16px;
+  }
+  .statistics-populer h2 {
+    font-size: 16px;
+  }
+  .statistics-populer p {
+    font-size: 12px;
+  }
+  .category-populer h3,
+  .category-populer h4 {
+    font-size: 10px;
+  }
+  .petisi-content-down {
+    width: 100%;
+    height: auto;
+  }
+  .petisi-content-down .image {
+    height: 200px;
+  }
+  .petisi-content-down .text .user-info {
+    margin-top: 2%;
+    height: 40px;
+  }
+  .petisi-content-down .text .user-info div:first-child {
+    width: 30px;
+    height: 30px;
+  }
+  .petisi-content-down .text .user-info div:nth-child(2) p {
+    font-size: 14px;
+  }
+  .petisi-content-down .text h5 {
+    font-size: 16px;
+  }
+  .petisi-content-down .title {
+    font-size: 16px;
+  }
+  .petisi-content-down {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+  .petisi-content-down .image {
+    height: 150px;
+  }
+  .petisi-content-down .text .user-info {
+    margin-top: 2%;
+    height: 40px;
+  }
+  .petisi-content-down .text .user-info div:first-child {
+    width: 20px;
+    height: 20px;
+  }
+  .petisi-content-down .text .user-info div:nth-child(2) p {
+    font-size: 12px;
+  }
+  .petisi-content-down .text h5 {
+    font-size: 14px;
+  }
+  .petisi-content-down .title {
+    font-size: 14px;
+  }
+  .user-info {
+    margin-top: 2%;
+    height: 40px;
+  }
+  .user-info div:first-child {
+    width: 20px;
+    height: 20px;
+  }
+  .user-info div:nth-child(2) p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .petisi-populer {
+    margin: 45px 20px;
+  }
+  .userinfo-and-trending .trending h2 {
+    font-size: 10px;
+  }
+  .petisi-title-container h2 {
+    font-size: 18px;
+  }
+  .petisi-content-up {
+    height: auto;
+  }
+  .userinfo-and-trending .userinfo .profile-picture img {
+    width: 25px;
+    height: 25px;
+  }
+  .username-and-date h2 {
+    font-size: 10px;
+  }
+  .username-and-date p {
+    font-size: 8px;
+  }
+  .petisi-content-up-text-right h1 {
+    font-size: 12px;
+  }
+  .petisi-content-up-text-right .description {
+    font-size: 10px;
+  }
+  .statistics-populer h2 {
+    font-size: 12px;
+  }
+  .statistics-populer p {
+    font-size: 8px;
+  }
+  .category-populer h3,
+  .category-populer h4 {
+    font-size: 8px;
+  }
+  .petisi-content-down .text .user-info div:nth-child(2) {
+    width: auto;
+    height: auto;
+  }
+  .petisi-content-down .text .user-info div:nth-child(2) p{
+    font-size: 10px;
+  }
+  .petisi-content-down .text .user-info div:first-child {
+    width: 15px;
+    height: 15px;
+  }
+  .petisi-content-down .title {
+    font-size: 12px;
+  }
+  .category h4 {
+    font-size: 10px;
+  }
+  .petisi-content-down .text h5 {
+    font-size: 10px;
+  }
+}
+/* end of petisi populer */
+
+/* lainnya */
+.item-petisi-container {
+  margin: 50px 100px 50px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-petisi-title-container {
+  width: 100%;
+  text-align: left;
+  color: #503d42e1;
+}
+
+.item-petisi-title-container h2 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  color: #503d42dc;
+}
+
+/* category */
+.category-petisi-container {
+  width: 100%;
+}
+
+.menu-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin: 1em auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  height: 120px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease;
+  gap: 10px;
+  padding: 40px;
+}
+
+.menu .item {
+  font-size: 16px;
+  padding: 5px 10px;
+  margin: 3px;
+  border: 1px solid #503d42;
+  color: #503d42;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.arrow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 30px;
+  z-index: 1;
+  background-color: #84c3188b;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.left-arrow {
+  left: 0px;
+}
+
+.right-arrow {
+  right: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .menu .item {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+  .arrow {
+    font-size: 20px;
+    padding: 8px;
+  }
+}
+/* end of category */
+
+.item-petisi-content-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-petisi-container-kiri {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+.item-petisi-container-kanan {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -1.5%;
+}
+
+.profile img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 100px;
+  margin-right: 1%;
+}
+
+.profile p {
+  color: #503d42;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.lainnya-right-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 10px;
+}
+
+.lainnya-right-container h2,
+.title-submit-and-sort-up-container .title h2 {
+  color: #503d42;
+  font-family: "Sora", sans-serif;
+  font-size: 20px;
+}
+
+.lainnya-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.lainnya {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.lainnya-left {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+}
+
+.lainnya-left img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.lainnya-right {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 2%;
+}
+
+.lainnya-right h3 {
+  font-weight: 600;
+  font-size: 14px;
+  color: #503d42;
+}
+
+.lainnya-right h2 {
+  margin-top: -2%;
+  font-size: 16px;
+  width: 90%;
+  color: #503d42;
+  font-weight: 600;
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+}
+
+.category h3 {
+  font-size: 12px;
+  padding: 5px 20px 5px 20px;
+  margin: 3px;
+  background-color: #84c318;
+  color: white;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.category h4 {
+  font-size: 12px;
+  padding: 5px 10px 5px 10px;
+  margin: 3px;
+  border: 1px solid #503d42;
+  color: #503d42;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.lainnya-right .category {
+  margin-top: -2%;
+}
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .item-petisi-container{
+    margin: 50px 20px 0px 20px;
+  }
+  .item-petisi-content-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .lainnya {
+    flex-direction: column;
+  }
+  .lainnya-left, .lainnya-right {
+    width: 100%;
+  }
+  .lainnya-right {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu .item {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+  .arrow {
+    font-size: 20px;
+    padding: 8px;
+  }
+  .item-petisi-content-container {
+    flex-direction: column;
+  }
+  .item-petisi-container-kiri, .item-petisi-container-kanan {
+    width: 100%;
+  }
+  .lainnya {
+    flex-direction: column;
+  }
+  .lainnya-left, .lainnya-right {
+    width: 100%;
+  }
+  .lainnya-right {
+    margin-left: 0;
+  }
+}
+/* end of lainnya */
+
+/* tips */
+.container-tips {
+  margin: 50px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tips-title h2 {
+  font-family: "Sora", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+  color: #503d42dc;
+}
+
+.tips-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-container .content {
+  background-color: white;
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border: 1px solid #503d42b3;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.content-container .image {
+  width: 40%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2%;
+}
+
+.content-container .image img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.content-container .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2%;
+  width: 58%;
+  height: auto;
+}
+
+.content-container .text h2 {
+  font-size: 14px;
+  color: #503d42;
+  font-weight: 400;
+  font-family: "Sora", sans-serif;
+}
+
+.content-container .text h3 {
+  font-size: 12px;
+  color: #503d42;
+  font-weight: 400;
+}
+
+.content-container .text h4 {
+  font-size: 12px;
+  color: #503d42;
+  font-weight: 400;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1200px) {
+  .content-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-tips {
+    margin: 30px 3%;
+  }
+  .content-container .content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0 15px 0;
+    padding: 15px 0 15px 0;
+  }
+  .content-container .image {
+    width: 50%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .content-container .text {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tips-title h2 {
+    font-size: 20px;
+  }
+  .content-container .content .image img {
+    width: 0px;
+    margin: 0;
+    padding: 0;
+  }
+  .content-container .content {
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+  .content-container .text h2 {
+    font-size: 12px;
+  }
+  .content-container .text h3,
+  .content-container .text h4 {
+    font-size: 10px;
+  }
+}
+/* end of tips */
+
+/* fullscreen ajakan */
+#FullscreenAjakan_petisi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  margin: 150px 0px 150px 0px;
+}
+.container-ajakan-petisi {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: #84c318;
+  margin: 150px 100px 150px 100px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><circle cx="12" cy="12" r="10" fill="white" /></svg>'),
+    auto;
+}
+
+.container-ajakan-petisi:hover {
+  border-radius: 0px;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #84c318;
+  margin: 150px 0px 150px 0px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3 ease;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><circle cx="12" cy="12" r="10" fill="white" /></svg>'),
+    auto;
+}
+
+.content-ajakan {
+  margin-left: 100px;
+}
+
+.icon img {
+  width: 100px;
+  height: auto;
+}
+
+.content-ajakan h1 {
+  font-family: "Sora", sans-serif;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.content-ajakan p {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  width: 900px;
+}
+
+.content-ajakan button {
+  background-color: #ffffff;
+  color: #84c318;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: all 0.3 ease;
+}
+
+.content-ajakan button:hover {
+  background-color: #503d42;
+  color: white;
+  transition: all 0.3 ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .container-ajakan-petisi {
+    padding: 40px;
+  }
+  .content-ajakan h1 {
+    font-size: 24px;
+  }
+  .content-ajakan p {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #FullscreenAjakan_petisi {
+    margin: 50px 0;
+  }
+  .container-ajakan-petisi {
+    padding: 30px;
+  }
+  .icon img {
+    width: 60px;
+  }
+  .content-ajakan{
+    margin-left: auto;
+  }
+  .content-ajakan h1 {
+    font-size: 20px;
+  }
+  .content-ajakan p {
+    font-size: 13px;
+  }
+  .content-ajakan button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-ajakan-petisi {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .icon img {
+    width: 50px;
+  }
+  .content-ajakan h1 {
+    font-size: 18px;
+  }
+  .content-ajakan p {
+    font-size: 12px;
+  }
+  .content-ajakan button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  .container-ajakan-petisi{
+    border-radius: 0px;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: #84c318;
+    margin: 150px 0px 150px 0px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3 ease;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><circle cx="12" cy="12" r="10" fill="white" /></svg>'),
+      auto;
+  }
+}
+/* end of fullsceen ajakan */
+
+/* footer */
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-bottom: 0;
+  -webkit-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.15);
+}
+
+.upper-footer {
+  display: flex;
+  flex-direction: row;
+  margin: 40px 100px 40px 100px;
+}
+
+.upper-footer .logo-and-description {
+  width: 25%;
+  height: 100%;
+}
+
+.line-footer-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0px;
+  border-bottom: 4px solid #84c318;
+  width: 100%;
+  margin: 0;
+  margin-top: -4%;
+}
+
+.upper-footer .logo-and-description {
+  display: flex;
+  flex-direction: column;
+  color: #503d42;
+  margin-right: 50px;
+}
+
+.upper-footer .logo-and-description img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.upper-footer .logo-and-description h3 {
+  width: 100%;
+  text-align: justify;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.upper-footer .location {
+  display: flex;
+  flex-direction: column;
+  color: #503d42;
+  margin-right: 30px;
+  width: 25%;
+}
+
+.upper-footer .location h2,
+.upper-footer .contact h2,
+.navigasi h2,
+.petisi-unggulan h2,
+.urun-dana-unggulan h2 {
+  font-family: "Sora", sans-serif;
+  font-size: 20px;
+}
+
+.upper-footer .location p,
+.upper-footer .contact p {
+  font-size: 14px;
+}
+
+.upper-footer .contact {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  font-family: "Sora", sans-serif;
+  color: #503d42;
+  width: 25%;
+}
+
+.upper-footer .contact div {
+  display: flex;
+  flex-direction: row;
+  margin: -10px 0px -20px;
+}
+
+.upper-footer .contact div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #503d42;
+  margin: 2%;
+  width: 50px;
+  height: 50px;
+  background-color: #f5fbef;
+  border-radius: 100px;
+}
+
+.upper-footer .contact div div:hover {
+  color: #ffffff;
+  background-color: #503d42;
+}
+
+.navigasi,
+.petisi-unggulan,
+.urun-dana-unggulan {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  color: #503d42;
+  margin-left: 20px;
+}
+
+.navigasi a,
+.petisi-unggulan a,
+.urun-dana-unggulan a {
+  text-decoration: none;
+  color: #503d42;
+  font-size: 14px;
+}
+
+.navigasi a:hover,
+.petisi-unggulan a:hover,
+.urun-dana-unggulan a:hover {
+  color: #84c318;
+}
+
+.down-footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.line-footer-2 {
+  align-self: center;
+  height: 0px;
+  border-bottom: 4px solid #84c318;
+  width: 80%;
+  margin: 0;
+}
+
+.down-footer h2 {
+  color: #503d42;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Sora", sans-serif;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1230px) {
+  .upper-footer {
+    margin: 20px 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .location,
+  .contact,
+  .navigasi,
+  .petisi-unggulan,
+  .urun-dana-unggulan {
+    text-align: center;
+  }
+  .upper-footer {
+    flex-direction: column;
+    margin: 40px 20px;
+  }
+
+  .upper-footer .logo-and-description,
+  .upper-footer .location,
+  .upper-footer .contact {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navigasi,
+  .petisi-unggulan,
+  .urun-dana-unggulan {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+  }
+  .line-footer-1 {
+    margin-top: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .upper-footer {
+    flex-direction: column;
+    margin: 40px 20px;
+  }
+  .upper-footer > div {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .upper-footer .logo-and-description img {
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .upper-footer {
+    margin: 20px 10px;
+  }
+  .upper-footer .location h2,
+  .upper-footer .contact h2,
+  .navigasi h2,
+  .petisi-unggulan h2,
+  .urun-dana-unggulan h2 {
+    font-size: 18px;
+  }
+  .upper-footer .location p,
+  .upper-footer .contact p,
+  .navigasi a,
+  .petisi-unggulan a,
+  .urun-dana-unggulan a {
+    font-size: 12px;
+  }
+  .down-footer h2 {
+    font-size: 12px;
+  }
+}
+/* end of footer */
