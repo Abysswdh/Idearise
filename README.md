@@ -14,13 +14,7 @@ Para inovator dapat memantau respon publik terhadap idenya melalui petisi. Jika 
 - **Urun Dana**: Galang dana untuk mewujudkan inovasi
 - **Berita**: Tetap update dengan berita terkini seputar inovasi
 - **Tips**: Dapatkan panduan dan tips untuk mengembangkan ide
-
-## 📊 Statistik
-
-- 🎯 **8,312** Total Ide Inovasi
-- 💰 **3,224** Inovasi yang diurun dana
-- 🏆 **IDR 1 Miliar** Urun Dana terkumpul
-
+  
 ## 🌐 Demo
 
 Kunjungi website kami: [Idearise](https://abysswdh.github.io/Idearise/)
@@ -68,17 +62,12 @@ Idearise/
 ## 👥 Tim Pengembang
 
 **Team_Araselatte** ☕
+- Putra Abyasa Wedha
+- Putu Satria Pratama
 
 ## 📄 Lisensi
 
 Copyright © 2024 Idearise. All Rights Reserved.
 
-## 📧 Kontak
-
-- **Lokasi**: SMA Negeri 4 Denpasar, Jl. Gunung Rinjani No.1, Tegal Harum, Kec. Denpasar Bar., Kota Denpasar, Bali
-- **Call Support**: (0361) 485363
-- **Email**: idearise@support.com
-
----
 
 Made with ❤️ by Team_Araselatte
